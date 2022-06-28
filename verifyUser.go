@@ -22,7 +22,7 @@ type Claim struct {
 	Verified bool `json:"https://goldenrecordstudios.earth/email_verified"`
 }
 
-func verifyUser (r *http.Request, claim *Claim) (int, error) {
+func VerifyUser (r *http.Request, claim *Claim) (int, error) {
 	
 	url := fmt.Sprintf("%s://%s%s", userAPIScheme, userAPIHost, userAPIUri)
 	body := []byte("")
