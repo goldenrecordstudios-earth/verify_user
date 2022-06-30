@@ -14,7 +14,7 @@ import (
 //"log"
 
 var authAPIScheme = os.Getenv("AUTH_API_SCHEME")
-var authAPIHost = os.Getenv("AUTH_API_HOME")
+var authAPIHost = os.Getenv("AUTH_API_HOST")
 var authAPIUri = os.Getenv("AUTH_API_URI")
 
 type Claim struct {
