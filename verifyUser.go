@@ -14,8 +14,8 @@ import (
 //"log"
 
 var authAPIScheme = os.Getenv("AUTH_API_SCHEME")
-var authAPIHost = os.Getenv("AUTH_API_SCHEME")
-var authAPIUri = os.Getenv("AUTH_API_SCHEME")
+var authAPIHost = os.Getenv("AUTH_API_HOME")
+var authAPIUri = os.Getenv("AUTH_API_URI")
 
 type Claim struct {
 	Email string `json:"https://goldenrecordstudios.earth/email"`
