@@ -13,9 +13,9 @@ import (
 //"strings"
 //"log"
 
-var userAPIScheme = os.Getenv("USER_API_SCHEME")
-var userAPIHost = os.Getenv("USER_API_HOST")
-var userAPIUri = os.Getenv("USER_API_URI")
+var authAPIScheme = os.Getenv("AUTH_API_SCHEME")
+var authAPIHost = os.Getenv("AUTH_API_SCHEME")
+var authAPIUri = os.Getenv("AUTH_API_SCHEME")
 
 type Claim struct {
 	Email string `json:"https://goldenrecordstudios.earth/email"`
@@ -24,7 +24,7 @@ type Claim struct {
 
 func VerifyUser (r *http.Request, claim *Claim) (int, error) {
 	
-	url := fmt.Sprintf("%s://%s%s", userAPIScheme, userAPIHost, userAPIUri)
+	url := fmt.Sprintf("%s://%s%s", authAPIScheme, authAPIHost, authAPIUri)
 	body := []byte("")
 
 	request, err := http.NewRequest(r.Method, url, bytes.NewReader(body))
